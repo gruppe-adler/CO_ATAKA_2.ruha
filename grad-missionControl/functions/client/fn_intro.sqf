@@ -59,7 +59,12 @@ playMusic "LeadTrack02_F_Tank";
 sleep 14;
 
 _introPic = findDisplay 46 ctrlCreate ["RscPicture", -1];
-_introPic ctrlSetPosition [safeZoneX, safezoneY, safeZoneW, safezoneH];
+_introPic ctrlSetPosition [
+	(safeZoneX + safeZoneW)/2 - safeZoneW/4,  
+ 	(safezoneY + safeZoneH)/2 - safeZoneH/4,  
+ 	safeZoneW/4,  
+ 	safezoneH/4
+];
 _introPic ctrlsetText "pic\intro_1.paa";
 _introPic ctrlCommit 0;
 
@@ -114,3 +119,5 @@ INTRO_DONE = true;
 publicVariable "INTRO_DONE";
 
 7 fadeMusic 0.25;
+
+player playAction "Salute";
