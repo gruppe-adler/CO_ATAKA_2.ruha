@@ -83,7 +83,7 @@ private _vehicleFlagDefinitions = [
 	 driver _vehicle disableAI "autocombat";
 
 	private _flag = "rhs_Flag_chdkz" createVehicle [0,0,0];
-	_flag setFlagTexture "\rhsafrf\addons\rhs_main\data\Flag_rus_CO.paa";
+	_flag setFlagTexture "pic\flag_sov_co.jpg";
 	
 	{
 	  if ((typeOf _vehicle) isEqualTo (_x select 0)) exitWith {

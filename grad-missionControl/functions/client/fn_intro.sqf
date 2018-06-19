@@ -111,7 +111,7 @@ _introPic ctrlCommit 3;
 sleep 11;
 
 
-[ "Im Morgengrauen", format ["25.07.1987"]] spawn BIS_fnc_infoText;
+[ "Nachts", format ["26.07.1987"]] spawn BIS_fnc_infoText;
 
 sleep 10;
 
@@ -120,4 +120,4 @@ publicVariable "INTRO_DONE";
 
 7 fadeMusic 0.25;
 
-player playAction "Salute";
+player switchmove "amovpercmstpslowwrfldnon";

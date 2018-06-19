@@ -23,6 +23,7 @@ class Header
 #include "node_modules\grad-customGear\saveDialog\dialog.hpp"
 
 class cfgFunctions {
+  #include "grad-civPartisans\cfgFunctions.hpp"
   #include "grad-convoy\cfgFunctions.hpp"
   #include "grad-missionControl\cfgFunctions.hpp"
   #include "grad-permaChoice\cfgFunctions.hpp"
@@ -42,6 +43,14 @@ class Loadouts {
     };
 };
 
+class CfgLeaflets
+{
+  class West // Configuration for 1Rnd_Leaflets_West_F
+  {
+    text = "RUSSIAN HORROR - large bear"; // Text shown when previewing the leaflet full-screen. Ideally should be localized, so even player who cannot read the image can get the information
+    texture = "pic\propaganda2.jpg"; // Leaflet texture shown when previewing the leaflet full-screen
+  }
+};
 
 class cfgSounds {
     class GRAD_heartbeat_slow_1

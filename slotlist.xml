@@ -1,0 +1,66 @@
+<match>
+  <company side="" natosymbol="armor" callsign="PAPA (PRP-3)" vehicletype="PRP-3">
+    <slot shortcode="CMD" description="Commander"/>
+    <slot shortcode="GUN" description="Gunner"/>
+    <slot shortcode="DRV" description="Driver"/>
+    <platoon side="" natosymbol="mech_inf" callsign="WOLF (BMP-2)" vehicletype="BMP-2">
+      <slot shortcode="CMD" description="Commander"/>
+      <slot shortcode="GUN" description="Gunner"/>
+      <slot shortcode="DRV" description="Driver"/>
+      <squad side="" natosymbol="inf" callsign="WOLF-1" vehicletype="Ural">
+        <slot shortcode="SQL" description="Squad Leader"/>
+        <slot shortcode="SQM" description="Squad Medic"/>
+        <fireteam>
+          <slot shortcode="FTL" description="Fireteam Leader"/>
+          <slot shortcode="MG" description="MG-Gunner"/>
+          <slot shortcode="MGA" description="MG-Assistant"/>
+          <slot shortcode="R26" description="Rifleman mit RPG26"/>
+        </fireteam>
+        <fireteam>
+          <slot shortcode="FTL" description="Fireteam Leader"/>
+          <slot shortcode="AT" description="RPG-7"/>
+          <slot shortcode="R26" description="Rifleman mit RPG26"/>
+          <slot shortcode="R" description="Rifleman"/>
+        </fireteam>
+      </squad>
+      <squad side="" natosymbol="inf" callsign="WOLF-2" vehicletype="Ural" min-slotted-player-count="20">
+        <slot shortcode="SQL" description="Squad Leader" min-slotted-player-count="20"/>
+        <slot shortcode="SQM" description="Squad Medic" min-slotted-player-count="20"/>
+        <fireteam>
+          <slot shortcode="FTL" description="Fireteam Leader"/>
+          <slot shortcode="MG" description="MG-Gunner"/>
+          <slot shortcode="MGA" description="MG-Assistant"/>
+          <slot shortcode="R26" description="Rifleman mit RPG26"/>
+        </fireteam>
+        <fireteam>
+          <slot shortcode="FTL" description="Fireteam Leader"/>
+          <slot shortcode="AT" description="RPG-7"/>
+          <slot shortcode="R26" description="Rifleman mit RPG26"/>
+          <slot shortcode="R" description="Rifleman"/>
+        </fireteam>
+      </squad>
+    </platoon>
+    <platoon side="" natosymbol="motor_inf" callsign="BÄR (BRDM AT)" vehicletype="BRDM AT">
+      <slot shortcode="CMD" description="Commander"/>
+      <slot shortcode="DRV" description="Driver"/>
+      <squad side="" natosymbol="armor" callsign="EBER (T-80)" vehicletype="T-80">
+        <slot shortcode="CMD" description="Commander"/>
+        <slot shortcode="GUN" description="Gunner"/>
+        <slot shortcode="DRV" description="Driver"/>
+      </squad>
+      <squad side="" natosymbol="maint" callsign="WIESEL" vehicletype="Repair+Fuel Truck">
+        <slot shortcode="LOG" description="Logistics Guy"/>
+        <slot shortcode="LOG" description="Logistics Guy"/>
+      </squad>
+    </platoon>
+    <platoon side="" natosymbol="art" callsign="STACHEL (BM-21)" vehicletype="BM-21">
+      <slot shortcode="DRV" description="Driver+Gunner"/>
+    </platoon>
+    <platoon side="" natosymbol="maint" callsign="MAMA (2 UAZ)" vehicletype="UAZ">
+      <slot shortcode="MED" description="Medic"/>
+      <slot shortcode="MED" description="Medic"/>
+      <slot shortcode="MED" description="Medic" min-slotted-player-count="20"/>
+      <slot shortcode="MED" description="Medic" min-slotted-player-count="20"/>
+    </platoon>
+  </company>
+</match>

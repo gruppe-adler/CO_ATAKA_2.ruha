@@ -22,4 +22,24 @@ if (
 
   }] call Ares_fnc_RegisterCustomModule;
 
+  ["ZEUS HELPERS", "Activate Civilian Modules",
+  {
+    // Get all the passed parameters
+    params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    civmodule_1 setVariable ["#active",true,true];
+    civmodule_2 setVariable ["#active",true,true];
+
+  }] call Ares_fnc_RegisterCustomModule;
+
+  ["ZEUS HELPERS", "Deactivate Civilian Modules",
+  {
+    // Get all the passed parameters
+    params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    civmodule_1 setVariable ["#active",false,true];
+    civmodule_2 setVariable ["#active",false,true];
+
+  }] call Ares_fnc_RegisterCustomModule;
+
 };

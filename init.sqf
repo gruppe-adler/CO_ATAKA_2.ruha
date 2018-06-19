@@ -21,8 +21,10 @@ showChat false;
 
 waitUntil {!isNull player};
 waitUntil {time > 0};
-// cutText ["", "BLACK IN", 1];
-[] spawn GRAD_missionControl_fnc_intro;
+cutText ["", "BLACK IN", 1];
+player switchmove "amovpercmstpslowwrfldnon";
+
+// [] spawn GRAD_missionControl_fnc_intro;
 
 /*
 	wie kaputt bin ich - einschätzung als ohnmächtiger
