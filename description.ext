@@ -22,7 +22,7 @@ class Header
 
 #include "node_modules\grad-customGear\saveDialog\dialog.hpp"
 
-class cfgFunctions {
+class cfgFunctions {  
   #include "grad-civPartisans\cfgFunctions.hpp"
   #include "grad-convoy\cfgFunctions.hpp"
   #include "grad-missionControl\cfgFunctions.hpp"

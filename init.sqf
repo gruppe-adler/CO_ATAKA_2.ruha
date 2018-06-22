@@ -1,4 +1,5 @@
 cutText ["","BLACK FADED",999];
+call compile preprocessfile "node_modules\shk_pos\functions\shk_pos_init.sqf";
 ["BLU_F", "UsMPT"] call GRAD_Loadout_fnc_FactionSetLoadout;
 ["OPF_F", "RuFlora"] call GRAD_Loadout_fnc_FactionSetLoadout;
 

@@ -10,5 +10,7 @@ class GRAD_zeusHelpers {
 		  file = grad-zeusHelpers\functions\server;
 
       	class forceMovement;
+      	class createChairCircle;
+      	class getPosInCircle;
   	};
 };

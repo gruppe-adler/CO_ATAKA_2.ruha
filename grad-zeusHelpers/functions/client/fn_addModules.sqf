@@ -42,4 +42,33 @@ if (
 
   }] call Ares_fnc_RegisterCustomModule;
 
+  ["ZEUS HELPERS", "Stuhlkreis bauen",
+  {
+    // Get all the passed parameters
+    params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    private _dialogResult =
+    [
+      "Anzahl der Stühle",
+      [
+        // The last number is optional! If you want the first selection you can remove the number.
+        ["Text Control", "", "24"]
+      ]
+    ] call Ares_fnc_showChooseDialog;
+
+    // If the dialog was closed.
+    if (_dialogResult isEqualTo []) exitWith{};
+
+    // Get the selected data
+    _dialogResult params ["_typedText"];
+    private _count = parseNumber _typedText;
+
+    if (_count isEqualTo 0) exitWith { systemChat format ["Unknown number: %1", _typedText]; };
+    // Output the data to the chat.    
+    //systemChat format ["Typed Text: %1", _typedText];
+    
+    ["Land_CampingChair_V1_F", _position, _count] call GRAD_zeusHelpers_fnc_createChairCircle;
+
+  }] call Ares_fnc_RegisterCustomModule;
+
 };
