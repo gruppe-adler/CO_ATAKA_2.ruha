@@ -52,22 +52,42 @@ if (
       "Anzahl der Stühle",
       [
         // The last number is optional! If you want the first selection you can remove the number.
-        ["Text Control", "", "24"]
+        ["Text Control", "", "24"],
+        ["Combo Box Control", ["Leer lassen", "Mit Spielern besetzen"], 0],
+        ["Combo Box Control", ["Campingstuhl", "Teppich"], 0]
       ]
     ] call Ares_fnc_showChooseDialog;
 
     // If the dialog was closed.
     if (_dialogResult isEqualTo []) exitWith{};
-
     // Get the selected data
-    _dialogResult params ["_typedText"];
+    _dialogResult params ["_typedText", "_fillWithPlayers", "_type"];
+    
+    if (_typedText isEqualTo 0) exitWith { systemChat "zero chairs?"; };
+    
     private _count = parseNumber _typedText;
 
-    if (_count isEqualTo 0) exitWith { systemChat format ["Unknown number: %1", _typedText]; };
-    // Output the data to the chat.    
-    //systemChat format ["Typed Text: %1", _typedText];
+
+    // prepare chairs for all players
+    if (_fillWithPlayers isEqualTo 1) then { 
+        _count = count (playableUnits + switchableUnits);
+    };
     
-    ["Land_CampingChair_V1_F", _position, _count] call GRAD_zeusHelpers_fnc_createChairCircle;
+    // possible chairs
+    private _classnames = ["Land_CampingChair_V1_F", "Land_Carpet_EP1"];
+    private _chairs = [_classnames select _type, _position, _count] call GRAD_zeusHelpers_fnc_createChairCircle;
+
+    // fill chairs with players
+    if (_fillWithPlayers isEqualTo 1) then {
+        {
+            if (_type isEqualTo 0) then {
+                [_chairs select _forEachIndex, _x] remoteExec ["acex_sitting_fnc_sit", _x, true];
+            } else {
+                _x setPos (getPos (_chairs select _forEachIndex));
+          };
+        } forEach (switchableUnits + playableUnits);
+    };
+
 
   }] call Ares_fnc_RegisterCustomModule;
 
