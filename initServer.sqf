@@ -3,7 +3,8 @@
 40 setFog [0.04,0.1,31];
 
 { 
-	_x setSkill ["aimingShake", 0.6]; 
+	_x setSkill ["aimingAccuracy", 0.1];
+	_x setSkill ["aimingShake", 0.5]; 
 	_x setSkill ["aimingSpeed", 0.75]; 
 	_x setSkill ["endurance", 0.8]; 
 	_x setSkill ["spotDistance", 1]; 

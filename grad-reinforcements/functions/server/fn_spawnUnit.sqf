@@ -8,6 +8,7 @@ if (_isCargo) then {
 };
 
 private _unit = _group createUnit [_type, _position, [], 0, _special];
+
 _unit moveInCargo _vehicle;
 
 {
@@ -15,12 +16,16 @@ _unit moveInCargo _vehicle;
 	nil
 } count allCurators;
 
-_unit setSkill ["aimingShake", 0.2]; 
-_unit setSkill ["aimingSpeed", 0.9]; 
-_unit setSkill ["endurance", 0.6]; 
+
+_unit setSkill ["aimingAccuracy", 0.1];
+_unit setSkill ["aimingShake", 0.5]; 
+_unit setSkill ["aimingSpeed", 0.75]; 
+_unit setSkill ["endurance", 0.8]; 
 _unit setSkill ["spotDistance", 1]; 
-_unit setSkill ["spotTime", 0.9]; 
+_unit setSkill ["spotTime", 0.8]; 
 _unit setSkill ["courage", 1]; 
 _unit setSkill ["reloadSpeed", 1]; 
 _unit setSkill ["commanding", 1];
 _unit setSkill ["general", 1];
+
+_unit
