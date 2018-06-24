@@ -11,6 +11,7 @@ if (!isNull _zeusDisplay) then {
 };
 
 cutText ["Mission abgeschlossen", "BLACK OUT", 5];
+[objNull, player] call ace_medical_fnc_treatmentAdvanced_fullHealLocal;
 
 sleep 5;
 

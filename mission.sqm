@@ -19829,7 +19829,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={3362.75,7.4088683,3579.3999};
+				position[]={3362.749,7.4086413,3579.3999};
 			};
 			areaSize[]={1,-1,1};
 			id=1362;
@@ -21784,7 +21784,7 @@ class Mission
 				};
 			};
 			id=1449;
-			atlOffset=-8.5830688e-006;
+			atlOffset=-1.335144e-005;
 		};
 		class Item239
 		{
@@ -21801,7 +21801,7 @@ class Mission
 			};
 			id=1451;
 			type="RHS_M2StaticMG_USMC_WD";
-			atlOffset=-8.5830688e-006;
+			atlOffset=-1.335144e-005;
 		};
 		class Item240
 		{
@@ -21855,7 +21855,7 @@ class Mission
 			};
 			id=1454;
 			type="rhs_Flag_Russia_F";
-			atlOffset=-0.017124414;
+			atlOffset=-0.017124653;
 		};
 		class Item243
 		{
@@ -21872,6 +21872,7 @@ class Mission
 			};
 			id=1455;
 			type="RHS_TOW_TriPod_USMC_WD";
+			atlOffset=-0.00039625168;
 		};
 		class Item244
 		{
@@ -21923,6 +21924,7 @@ class Mission
 				};
 			};
 			id=1457;
+			atlOffset=-0.00039625168;
 		};
 		class Item245
 		{
