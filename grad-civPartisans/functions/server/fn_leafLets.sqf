@@ -24,7 +24,7 @@
 		["fired",[myLeaflet,"Custom_02"]] call bis_fnc_initLeaflet;
 
 
-		["fired",[position player,40]] execVM "GRAD-civPartisans\functions\server\fn_leaflets.sqf";
+		["fired",[position this,getPos this select 2]] spawn GRAD_civPartisans_fnc_leafLets;
 		
 	Returns:
 	NOTHING

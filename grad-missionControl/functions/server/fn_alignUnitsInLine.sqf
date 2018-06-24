@@ -24,10 +24,9 @@ _viewDirection = _direction - 90;
 
 			_x setPos _linePos;
 			_x setDir _viewDirection;
-			_x playAction "PlayerStand";
 			_x setUnitPos "UP";
 
-			_x switchMove "ACE_AmovPercMstpScapWnonDnon";
+			[_x, "ACE_AmovPercMstpScapWnonDnon"] remoteExec ["switchMove", 0, true];
 
 			_x disableAI "MOVE";
 			_x disableAI "WEAPONAIM";

@@ -120,4 +120,4 @@ publicVariable "INTRO_DONE";
 
 7 fadeMusic 0.25;
 
-player switchmove "amovpercmstpslowwrfldnon";
+[player, "amovpercmstpslowwrfldnon"] remoteExec ["switchMove", 0, true];

@@ -33,6 +33,9 @@ class cfgFunctions {
   #include "node_modules\grad-customGear\cfgFunctions.hpp"
 };
 
+#define NIGHTVISION
+#define GUNLIGHTS
+
 class Loadouts {
     baseDelay = 1;      // base delay in seconds before applying loadouts on mission start
     handleRadios = 1;   // radios are handled by grad-loadout
