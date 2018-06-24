@@ -80,7 +80,7 @@ if (
   	// Get all the passed parameters
   	params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
-  	[[east,west,independent,civilian],["tsk_attack"],["Ruha angreifen und Feinde werfen.","Ruha angreifen","mrk_ruha"],"mrk_ruha",1,2,true, "attack",true] call BIS_fnc_taskCreate;
+  	[[east,west,independent,civilian],["tsk_attack"],["Blauen Sektor sichern","Sektor sichern",""],"",1,2,true, "attack",true] call BIS_fnc_taskCreate;
 
   }] call Ares_fnc_RegisterCustomModule;
 
@@ -110,7 +110,7 @@ if (
   	// Get all the passed parameters
   	params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
-  	[[east,west,independent,civilian],["tsk_defend"],["Ruha verteidigen und Gegenangriff abwehren.","Ruha halten","mrk_ruha"],"mrk_ruha",1,2,true, "defend", true] call BIS_fnc_taskCreate;
+  	[[east,west,independent,civilian],["tsk_defend"],["Gegenangriff abwehren.","Verteidigen",""],"",1,2,true, "defend", true] call BIS_fnc_taskCreate;
 
   }] call Ares_fnc_RegisterCustomModule;
 

@@ -57,5 +57,3 @@ if (_armed) then {
 } else {
 	_unit setUnitLoadout [[],[],[],[_uniform,[]],[],[],_headgear,"",[],["","","","","",""]];
 };
-
-hint "true";

@@ -4,6 +4,8 @@ class grad_missionControl {
 		  file = grad-missionControl\functions\client;
 
       class intro;
+      class outro;
+      class rotatingCam;
       class setMyFrequency;
       class setGroupFrequencies;
       class typeText;

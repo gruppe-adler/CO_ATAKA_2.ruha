@@ -81,13 +81,34 @@ if (
     if (_fillWithPlayers isEqualTo 1) then {
         {
             if (_type isEqualTo 0) then {
-                [_chairs select _forEachIndex, _x] remoteExec ["acex_sitting_fnc_sit", _x, true];
+                [_position, _count, _chairs select _forEachIndex] remoteExec ["GRAD_missionControl_fnc_outro", _x, true];
             } else {
                 _x setPos (getPos (_chairs select _forEachIndex));
           };
         } forEach (switchableUnits + playableUnits);
     };
 
+
+  }] call Ares_fnc_RegisterCustomModule;
+
+
+  ["ZEUS HELPERS", "Outro",
+  {
+    // Get all the passed parameters
+    params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    
+    private _count =count (playableUnits + switchableUnits);
+
+    
+    // possible chairs
+    private _chairs = ["Land_CampingChair_V1_F", _position, _count] call GRAD_zeusHelpers_fnc_createChairCircle;
+
+    // fill chairs with players
+    {      
+        [_x, _position, _count, _chairs select _forEachIndex] remoteExec ["GRAD_missionControl_fnc_outro", _x, true];
+          
+    } forEach (switchableUnits + playableUnits);
 
   }] call Ares_fnc_RegisterCustomModule;
 

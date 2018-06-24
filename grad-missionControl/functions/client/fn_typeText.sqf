@@ -101,7 +101,7 @@ _processedTextF  = "";
 		
 		if (!(_char isEqualTo " ")) then {
 			if (!_skipSound) then {
-				playSound (selectRandom ["GRAD_heartbeat_slow_1","GRAD_heartbeat_slow_2"]);
+				// playSound (selectRandom ["GRAD_heartbeat_slow_1","GRAD_heartbeat_slow_2"]);
 			};
 			sleep DELAY_CHARACTER;
 		};
