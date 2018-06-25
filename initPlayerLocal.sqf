@@ -1,3 +1,5 @@
+player addEventHandler ["HandleRating", {0}];
+
 [] call GRAD_missionControl_fnc_setMyFrequency;
 
 ["InitializePlayer", [player, true]] call BIS_fnc_dynamicGroups;
