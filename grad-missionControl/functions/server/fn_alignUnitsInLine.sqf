@@ -23,6 +23,8 @@ _viewDirection = _direction - 90;
 			private _linePos = line_start getRelPos [_forEachIndex * _distance, _direction + random 0.1];
 
 			_x setPos _linePos;
+			_x setVariable ["GRAD_setup_pos", _linePos, true];
+			_x setVariable ["GRAD_setup_dir", _viewDirection, true];
 			_x setDir _viewDirection;
 			_x setUnitPos "UP";
 

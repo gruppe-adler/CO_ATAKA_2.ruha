@@ -80,7 +80,7 @@ if (
   	// Get all the passed parameters
   	params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
-  	[[east,west,independent,civilian],["tsk_attack"],["Blauen Sektor sichern","Sektor sichern",""],"",1,2,true, "attack",true] call BIS_fnc_taskCreate;
+  	[slot_boss,["tsk_attack"],["Blauen Sektor sichern, AA zerstören","Sektor sichern",""],"",1,2,true, "attack",true] call BIS_fnc_taskCreate;
 
   }] call Ares_fnc_RegisterCustomModule;
 
@@ -110,7 +110,7 @@ if (
   	// Get all the passed parameters
   	params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
-  	[[east,west,independent,civilian],["tsk_defend"],["Gegenangriff abwehren.","Verteidigen",""],"",1,2,true, "defend", true] call BIS_fnc_taskCreate;
+  	[slot_boss,["tsk_defend"],["Gegenangriff abwehren.","Verteidigen",""],"",1,2,true, "defend", true] call BIS_fnc_taskCreate;
 
   }] call Ares_fnc_RegisterCustomModule;
 
@@ -139,7 +139,7 @@ if (
     // Get all the passed parameters
     params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
-    [[east,west,independent,civilian],["tsk_join"],["Nachbesprechung abhalten.","Nachbesprechung",""],_position,1,2,true, "joinHere",true] call BIS_fnc_taskCreate;
+    [slot_boss,["tsk_join"],["Nachbesprechung abhalten.","Nachbesprechung",""],_position,1,2,true, "joinHere",true] call BIS_fnc_taskCreate;
 
   }] call Ares_fnc_RegisterCustomModule;
 };

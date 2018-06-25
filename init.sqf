@@ -25,8 +25,10 @@ waitUntil {time > 0};
 // cutText ["", "BLACK IN", 1];
 // player switchmove "amovpercmstpslowwrfldnon";
 
-[] spawn GRAD_missionControl_fnc_intro;
+private _pos = player getVariable ["GRAD_setup_pos", position player];
+private _dir = player getVariable ["GRAD_setup_dir", 0];
 
-/*
-	wie kaputt bin ich - einschätzung als ohnmächtiger
-*/
+player setPos _pos; 
+player setDir _dir;
+
+[] spawn GRAD_missionControl_fnc_intro;

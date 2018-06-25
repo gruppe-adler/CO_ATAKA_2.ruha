@@ -12,12 +12,13 @@ if (!isNull _zeusDisplay) then {
 
 cutText ["Mission abgeschlossen", "BLACK OUT", 5];
 [objNull, player] call ace_medical_fnc_treatmentAdvanced_fullHealLocal;
-
 sleep 5;
-
+moveout player;
 
 [_chair, _unit] call acex_sitting_fnc_sit;
 
+playMusic "QGTrack2";
+7 fadeMusic 0.5;
 
 [
 	_center,

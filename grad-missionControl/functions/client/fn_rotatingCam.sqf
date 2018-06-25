@@ -54,4 +54,6 @@ _this spawn {
     sleep 1;
     cutText ["", "BLACK IN", 1];
 
+    7 fadeMusic 0.25;
+
 };
